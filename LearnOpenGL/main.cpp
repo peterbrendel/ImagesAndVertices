@@ -11,30 +11,22 @@ int main(int argc, const char* argv[]) {
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	ShaderManager orangeShader = ShaderManager();
-	std::cout << "loadShader" << std::endl;
 	orangeShader.loadShader("shaders/example1.vert", GL_VERTEX_SHADER);
-	std::cout << "loadShader_end" << std::endl;
-	std::cout << "loadShader" << std::endl;
 	orangeShader.loadShader("shaders/example1.frag", GL_FRAGMENT_SHADER);
-	std::cout << "loadShader_end" << std::endl;
 
 	ShaderManager yellowShader = ShaderManager();
 	yellowShader.loadShader("shaders/example1.vert", GL_VERTEX_SHADER);
 	yellowShader.loadShader("shaders/exercise3.frag", GL_FRAGMENT_SHADER);
 
-	unsigned int orangeShaderProgram = orangeShader.getProgram();
-	unsigned int yellowShaderProgram = yellowShader.getProgram();
+	unsigned int orangeShaderProgram = orangeShader.program();
+	unsigned int yellowShaderProgram = yellowShader.program();
+
+	// Orange triangle
 
 	float orangeTriangleVertices[] = {
 		 0.5f,  0.5f, 0.0f,
 		-0.5f, -0.5f, 0.0f,
 		-0.5f,  0.5f, 0.0f
-	};
-
-	float yellowTriangleVertices[] = {
-		 0.5f,  0.5f, 0.0f,
-		 0.5f, -0.5f, 0.0f,
-		-0.5f, -0.5f, 0.0f
 	};
 
 	unsigned int VAOOrange;
@@ -46,6 +38,15 @@ int main(int argc, const char* argv[]) {
 	glBindBuffer(GL_ARRAY_BUFFER, VBOOrange);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(orangeTriangleVertices), orangeTriangleVertices, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	// Yellow triangle
+
+	float yellowTriangleVertices[] = {
+		 0.5f,  0.5f, 0.0f,
+		 0.5f, -0.5f, 0.0f,
+		-0.5f, -0.5f, 0.0f
+	};
 
 	unsigned int VAOYellow;
 	glGenVertexArrays(1, &VAOYellow);
@@ -56,8 +57,9 @@ int main(int argc, const char* argv[]) {
 	glBindBuffer(GL_ARRAY_BUFFER, VBOYellow);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(yellowTriangleVertices), yellowTriangleVertices, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
 	glEnableVertexAttribArray(0);
+
+	// Render loop
 
 	while (!glfwWindowShouldClose(window)) {
 		handleInput(window);
@@ -77,8 +79,6 @@ int main(int argc, const char* argv[]) {
 
 		glfwPollEvents();
 		glfwSwapBuffers(window);
-		int a;
-		std::cin >> a;
 	}
 
 	glfwTerminate();

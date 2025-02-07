@@ -18,10 +18,11 @@ private:
 
 public:
     ShaderManager() { }
-    int loadShader(std::string path, GLenum shaderType);
-    unsigned int getProgram();
+    int loadShader(std::string, GLenum);
+    unsigned int program();
 
 private:
-    int succeeded(unsigned int id, GLenum query);
+    int compilingSucceeded(unsigned int);
+    int linkingSucceeded(unsigned int);
     void deleteSources();
 };

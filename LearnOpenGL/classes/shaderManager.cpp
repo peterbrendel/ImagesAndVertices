@@ -9,14 +9,13 @@ int ShaderManager::loadShader(std::string path, GLenum shaderType) {
     shaders.insert({ shaderType, glCreateShader(shaderType) });
 
     const char *sourcePtr = shaderSources[shaderType].c_str();
-    std::cout << shaderSources[shaderType] << std::endl;
     glShaderSource(shaders[shaderType], 1, &sourcePtr, NULL);
     glCompileShader(shaders[shaderType]);
 
-    return succeeded(shaders[shaderType], GL_COMPILE_STATUS);
+    return compilingSucceeded(shaders[shaderType]);
 }
 
-unsigned int ShaderManager::getProgram() {
+unsigned int ShaderManager::program() {
     if (ready) return shaderProgram;
         
     shaderProgram = glCreateProgram();
@@ -26,24 +25,34 @@ unsigned int ShaderManager::getProgram() {
 
     glLinkProgram(shaderProgram);
 
-    if (succeeded(shaderProgram, GL_LINK_STATUS)) deleteSources();
+    if (linkingSucceeded(shaderProgram)) deleteSources();
 
     ready = true;
 
     return shaderProgram;
 }
 
-int ShaderManager::succeeded(unsigned int id, GLenum query) {
+int ShaderManager::compilingSucceeded(unsigned int id) {
     int success;
     char infoLog[512];
 
-    std::cout << id << " " << query << std::endl;
-    glGetProgramiv(id, query, &success);
-    std::cout << glGetError() << std::endl;
+    glGetShaderiv(id, GL_COMPILE_STATUS, &success);
 
     if (!success) {
         glGetProgramInfoLog(id, 512, NULL, infoLog);
-		std::cout << "ShaderManager error:\n" << infoLog << std::endl;
+    }
+
+    return success;
+}
+
+int ShaderManager::linkingSucceeded(unsigned int id) {
+    int success;
+    char infoLog[512];
+
+    glGetProgramiv(id, GL_LINK_STATUS, &success);
+
+    if (!success) {
+        glGetProgramInfoLog(id, 512, NULL, infoLog);
     }
 
     return success;
