@@ -9,6 +9,7 @@ int ShaderManager::loadShader(std::string path, GLenum shaderType) {
     shaders.insert({ shaderType, glCreateShader(shaderType) });
 
     const char *sourcePtr = shaderSources[shaderType].c_str();
+    std::cout << shaderSources[shaderType] << std::endl;
     glShaderSource(shaders[shaderType], 1, &sourcePtr, NULL);
     glCompileShader(shaders[shaderType]);
 
@@ -36,7 +37,9 @@ int ShaderManager::succeeded(unsigned int id, GLenum query) {
     int success;
     char infoLog[512];
 
+    std::cout << id << " " << query << std::endl;
     glGetProgramiv(id, query, &success);
+    std::cout << glGetError() << std::endl;
 
     if (!success) {
         glGetProgramInfoLog(id, 512, NULL, infoLog);
