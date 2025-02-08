@@ -24,10 +24,10 @@
     <ClCompile Include="setup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="classes\shaderManager.cpp">
+    <ClCompile Include="classes\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="headers\shaderManager.hpp">
+    <ClCompile Include="headers\shader.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="shaders\example1.frag">

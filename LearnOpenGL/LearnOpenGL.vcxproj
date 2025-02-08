@@ -132,9 +132,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="classes\shaderManager.cpp" />
+    <ClCompile Include="classes\shader.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="headers\shaderManager.hpp" />
+    <ClCompile Include="headers\shader.hpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="setup.cpp" />
     <ClCompile Include="shaders\example1.frag">
