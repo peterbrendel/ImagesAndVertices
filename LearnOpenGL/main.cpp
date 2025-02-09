@@ -10,54 +10,38 @@ int main(int argc, const char* argv[]) {
 	// FramebufferSize in other words is the window drawing region
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	Shader orangeShader = Shader("shaders/example1.vert", "shaders/example1.frag");
-	Shader yellowShader = Shader("shaders/example1.vert", "shaders/exercise3.frag");
-
-	// Orange triangle
-
-	float orangeTriangleVertices[] = {
-		 0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-		-0.5f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
-	};
-
-	unsigned int VAOOrange;
-	glGenVertexArrays(1, &VAOOrange);
-	glBindVertexArray(VAOOrange);
-
-	unsigned int VBOOrange;
-	glGenBuffers(1, &VBOOrange);
-	glBindBuffer(GL_ARRAY_BUFFER, VBOOrange);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(orangeTriangleVertices), orangeTriangleVertices, GL_STATIC_DRAW);
-
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
+	Shader fractalShader = Shader("shaders/example1.vert", "shaders/fractal.frag");
 
 	// Yellow triangle
 
-	float yellowTriangleVertices[] = {
-		 0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-		 0.5f, -0.5f, 0.0f,	0.0f, 0.0f, 1.0f,
-		-0.5f, -0.5f, 0.0f,	0.0f, 1.0f, 0.0f
+	float vertices[] = {
+		1.0f,  1.0f, 0.0f,  // top right
+		1.0f, -1.0f, 0.0f,  // bottom right
+	   -1.0f, -1.0f, 0.0f,  // bottom left
+	   -1.0f,  1.0f, 0.0f   // top left 
 	};
 
-	unsigned int VAOYellow;
-	glGenVertexArrays(1, &VAOYellow);
-	glBindVertexArray(VAOYellow);
+	unsigned int indices[] = {
+		0, 1, 3,
+		1, 2, 3
+	};
 
-	unsigned int VBOYellow;
-	glGenBuffers(1, &VBOYellow);
-	glBindBuffer(GL_ARRAY_BUFFER, VBOYellow);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(yellowTriangleVertices), yellowTriangleVertices, GL_STATIC_DRAW);
+	unsigned int VAO;
+	glGenVertexArrays(1, &VAO);
+	glBindVertexArray(VAO);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+	unsigned int VBO;
+	glGenBuffers(1, &VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	unsigned int EBO;
+	glGenBuffers(1, &EBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
 
 	// Render loop
 
@@ -67,20 +51,15 @@ int main(int argc, const char* argv[]) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		float timeValue = glfwGetTime();
-		float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
-		int vertexColorLocation = glGetUniformLocation(orangeShader.m_shaderProgram, "ourColor");
+		float vertexTimeLocation = glGetUniformLocation(fractalShader.m_shaderProgram, "u_time");
 		
 		// use program before set uniform
-		orangeShader.use();
-		glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+		fractalShader.use();
+		glUniform1f(vertexTimeLocation, 7.1 + glfwGetTime()  * 0.01);
 
-		glBindVertexArray(VAOOrange);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-
-		yellowShader.use();
-		glBindVertexArray(VAOYellow);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		//yellowShader.use();
+		glBindVertexArray(VAO);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		glBindVertexArray(0);
 
