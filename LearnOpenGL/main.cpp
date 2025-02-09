@@ -10,20 +10,18 @@ int main(int argc, const char* argv[]) {
 	// FramebufferSize in other words is the window drawing region
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	Shader fractalShader = Shader("shaders/example1.vert", "shaders/fractal.frag");
+	Shader fractalShader = Shader("shaders/example1.vert", "shaders/example1.frag");
 
 	// Yellow triangle
 
 	float vertices[] = {
-		1.0f,  1.0f, 0.0f,  // top right
+		0.0f,  1.0f, 0.0f,  // top middle
 		1.0f, -1.0f, 0.0f,  // bottom right
 	   -1.0f, -1.0f, 0.0f,  // bottom left
-	   -1.0f,  1.0f, 0.0f   // top left 
 	};
 
 	unsigned int indices[] = {
-		0, 1, 3,
-		1, 2, 3
+		0, 1, 2
 	};
 
 	unsigned int VAO;
@@ -59,7 +57,7 @@ int main(int argc, const char* argv[]) {
 
 		//yellowShader.use();
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
 		glBindVertexArray(0);
 
