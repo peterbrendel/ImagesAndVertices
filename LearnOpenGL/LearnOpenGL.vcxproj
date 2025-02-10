@@ -112,7 +112,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,6 +133,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classes\shader.cpp" />
+    <ClCompile Include="classes\shape.cpp" />
+    <ClCompile Include="classes\texture.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="headers\shader.hpp" />
     <ClCompile Include="main.cpp" />
@@ -146,7 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\setup.hpp" />
+    <ClInclude Include="headers\shape.hpp" />
+    <ClInclude Include="headers\shapes\triangle.hpp" />
     <ClInclude Include="headers\stb_image.h" />
+    <ClInclude Include="headers\texture.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

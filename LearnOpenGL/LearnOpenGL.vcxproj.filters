@@ -36,12 +36,27 @@
     <ClCompile Include="shaders\example1.vert">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="classes\texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\setup.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\texture.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\shape.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\shapes\triangle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

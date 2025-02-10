@@ -8,6 +8,19 @@ Shader::Shader(std::string vertPath, std::string fragPath) {
     link(vertShader, fragShader);
 }
 
+void Shader::use() {
+    glUseProgram(m_shaderProgram);
+}
+
+void Shader::setUniform(std::string name, float value) {
+    glUniform1f(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
+}
+
+void Shader::setUniform(std::string name, int value) {
+    std::cout << "setUniform(" << name << "," << value << ")" << std::endl;
+    glUniform1i(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
+}
+
 std::string Shader::loadShader(std::string path, GLenum shaderType, unsigned int* source) {
     std::ifstream ShaderStream(path);
     std::stringstream buffer;
@@ -58,8 +71,4 @@ void Shader::logLinkingError(unsigned int id) {
         glGetProgramInfoLog(id, 512, NULL, infoLog);
         std::cout << infoLog << std::endl;
     }
-}
-
-void Shader::use() {
-    glUseProgram(m_shaderProgram);
 }
