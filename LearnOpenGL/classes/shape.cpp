@@ -1,6 +1,7 @@
 #include "shape.hpp"
 #include <glad/glad.h>
 #include <iostream>
+#include <gl/GL.h>
 
 Shape::Shape(std::vector<float>&& vertexData, std::vector<int>&& indices)
     : m_vertexData(std::move(vertexData)),
@@ -47,6 +48,7 @@ void Shape::draw() {
     }
 
     glBindVertexArray(m_VAO);
+
     glDrawElements(GL_TRIANGLES, m_indices.size() * sizeof(int), GL_UNSIGNED_INT, 0);
 
     glBindVertexArray(0);

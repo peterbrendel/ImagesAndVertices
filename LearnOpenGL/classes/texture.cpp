@@ -4,6 +4,8 @@
 #include "stb_image.h"
 
 Texture::Texture(std::string path) {
+    stbi_set_flip_vertically_on_load(true);
+
     int width, height, channels;
     unsigned char* data;
     data = stbi_load(path.c_str(), &width, &height, &channels, 0);
@@ -17,7 +19,7 @@ Texture::Texture(std::string path) {
     glGenTextures(1, &m_textureId);
     glBindTexture(GL_TEXTURE_2D, m_textureId);
 
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB + (channels == 4), GL_UNSIGNED_BYTE, data);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB + (channels == 4), width, height, 0, GL_RGB + (channels == 4), GL_UNSIGNED_BYTE, data);
 
     stbi_image_free(data);
 

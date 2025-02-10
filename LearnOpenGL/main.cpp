@@ -12,12 +12,21 @@ int main(int argc, const char* argv[]) {
 	// FramebufferSize in other words is the window drawing region
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+
 	Shader shader = Shader("shaders/example1.vert", "shaders/example1.frag");
 
 	Triangle triangles[] = {
 		Triangle(glm::vec3(0.0f, 0.0f, 0.0f)),
 		Triangle(glm::vec3(0.5f, 0.0f, 0.0f))
 	};
+
+	triangles[0].m_position = glm::vec3(-0.9f, 0.0f, 0.0f);
+	triangles[0].m_scale = glm::vec3(0.25f, 0.25f, 0.25f);
+
+	triangles[1].m_position = glm::vec3(0.9f, 0.0f, 0.0f);
+	triangles[1].m_scale = glm::vec3(0.25f, 0.25f, 0.25f);
 
 	Texture textures[] = {
 		Texture("assets/Boshy.png"),
@@ -39,10 +48,13 @@ int main(int argc, const char* argv[]) {
 
 		// use program before set uniform
 		shader.use();
-
+		//glDepthMask(GL_FALSE);
 		for (auto&& t : triangles) {
+			shader.setUniform("uTranslation", t.m_position);
+			shader.setUniform("uScaling", t.m_scale);
 			t.draw();
 		}
+		glDepthMask(GL_TRUE);
 
 		glBindVertexArray(0);
 

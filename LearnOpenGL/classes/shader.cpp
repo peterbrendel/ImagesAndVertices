@@ -17,8 +17,11 @@ void Shader::setUniform(std::string name, float value) {
 }
 
 void Shader::setUniform(std::string name, int value) {
-    std::cout << "setUniform(" << name << "," << value << ")" << std::endl;
     glUniform1i(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
+}
+
+void Shader::setUniform(std::string name, glm::vec3 value) {
+    glUniform3f(glGetUniformLocation(m_shaderProgram, name.c_str()), value.x, value.y, value.z);
 }
 
 std::string Shader::loadShader(std::string path, GLenum shaderType, unsigned int* source) {
