@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iostream>
 #include <glm/vec3.hpp>
+#include <glm/mat4x4.hpp>
 
 class Shader
 {
@@ -18,6 +19,7 @@ public:
     void setUniform(std::string name, float value);
     void setUniform(std::string name, int value);
     void setUniform(std::string name, glm::vec3 value);
+    void setUniform(std::string name, glm::mat4 value);
 
 private:
     std::string loadShader(std::string, GLenum, unsigned int*);

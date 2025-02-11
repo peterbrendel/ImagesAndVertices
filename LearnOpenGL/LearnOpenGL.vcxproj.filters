@@ -30,10 +30,10 @@
     <ClCompile Include="headers\shader.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="shaders\example1.frag">
+    <ClCompile Include="shaders\main.frag">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="shaders\example1.vert">
+    <ClCompile Include="shaders\main.vert">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="classes\texture.cpp">
@@ -57,6 +57,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\shapes\triangle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\shapes\cube.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\shapes\square.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

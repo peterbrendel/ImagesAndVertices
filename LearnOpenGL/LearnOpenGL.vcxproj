@@ -139,16 +139,18 @@
     <ClCompile Include="headers\shader.hpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="setup.cpp" />
-    <ClCompile Include="shaders\example1.frag">
+    <ClCompile Include="shaders\main.frag">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="shaders\example1.vert">
+    <ClCompile Include="shaders\main.vert">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\setup.hpp" />
     <ClInclude Include="headers\shape.hpp" />
+    <ClInclude Include="headers\shapes\cube.hpp" />
+    <ClInclude Include="headers\shapes\square.hpp" />
     <ClInclude Include="headers\shapes\triangle.hpp" />
     <ClInclude Include="headers\stb_image.h" />
     <ClInclude Include="headers\texture.hpp" />

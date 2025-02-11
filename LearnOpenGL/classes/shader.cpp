@@ -1,4 +1,7 @@
 #include "shader.hpp"
+#include <glm/gtc/type_ptr.hpp>
+#define GLM_ENABLE_EXPERIMENTAL
+#include "glm/gtx/string_cast.hpp"
 
 Shader::Shader(std::string vertPath, std::string fragPath) {
     unsigned int vertShader, fragShader;
@@ -20,8 +23,14 @@ void Shader::setUniform(std::string name, int value) {
     glUniform1i(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
 }
 
+// should these ever use move semantics or shared pointers?
 void Shader::setUniform(std::string name, glm::vec3 value) {
-    glUniform3f(glGetUniformLocation(m_shaderProgram, name.c_str()), value.x, value.y, value.z);
+    glUniform3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, glm::value_ptr(value));
+}
+
+// should these ever use move semantics or shared pointers?
+void Shader::setUniform(std::string name, glm::mat4 value) {
+    glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
 std::string Shader::loadShader(std::string path, GLenum shaderType, unsigned int* source) {
