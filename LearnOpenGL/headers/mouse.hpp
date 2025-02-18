@@ -23,7 +23,7 @@ class Mouse
 public:
     Mouse();
     ~Mouse();
-    void setup(GLFWwindow* window);
+    static void setup(GLFWwindow* window);
 
     CursorMovement getMovement();
 };

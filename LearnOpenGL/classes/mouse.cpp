@@ -1,6 +1,6 @@
 #include <mouse.hpp>
 
-std::vector<Mouse*> instances;
+std::vector<Mouse*> Mouse::instances;
 
 Mouse::Mouse() {
     instances.push_back(this);
@@ -25,15 +25,24 @@ void Mouse::posCallback(GLFWwindow* window, double xPos, double yPos) {
 void Mouse::clickCallback(GLFWwindow* window, int button, int action, int mods) {
     if (button == GLFW_MOUSE_BUTTON_2) {
         for (Mouse* instance : instances) {
-            instance->locked = (action != GLFW_RELEASE);
+            bool locked = (action != GLFW_RELEASE);
+            instance->locked = locked;
+            if (!locked) {
+                instance->x = 0.0f;
+                instance->y = 0.0f;
+                instance->lastX = 0.0f;
+                instance->lastY = 0.0f;
+            }
         }
+        auto mode = (action != GLFW_RELEASE) ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL;
+        glfwSetInputMode(window, GLFW_CURSOR, mode);
     }
 }
 
 CursorMovement Mouse::getMovement() {
     CursorMovement payload = {
         x, y,
-        x - lastX, y - lastY,
+        x - lastX, lastY - y,
         locked
     };
 

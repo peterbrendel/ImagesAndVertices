@@ -61,10 +61,10 @@ int main(int argc, const char* argv[]) {
 	shader.use();
 	shader.setUniform("fTexture1", 0);
 
-	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f));
+	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f));
 
 	while (!glfwWindowShouldClose(window)) {
-		float currentFrame = glfwGetTime();
+		float currentFrame = (float) glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
