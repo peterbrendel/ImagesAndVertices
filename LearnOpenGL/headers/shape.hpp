@@ -1,7 +1,7 @@
 #pragma once
+#include <texture.hpp>
 #include <glm/vec3.hpp>
 #include <vector>
-#include <texture.hpp>
 
 class Shape
 {

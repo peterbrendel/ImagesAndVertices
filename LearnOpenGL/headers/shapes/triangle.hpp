@@ -1,4 +1,4 @@
-#include "shape.hpp"
+#include <shape.hpp>
 #include <glad/glad.h>
 
 class Triangle : public Shape

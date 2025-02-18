@@ -132,6 +132,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="classes\camera.cpp" />
+    <ClCompile Include="classes\keyboard.cpp" />
+    <ClCompile Include="classes\mouse.cpp" />
     <ClCompile Include="classes\shader.cpp" />
     <ClCompile Include="classes\shape.cpp" />
     <ClCompile Include="classes\texture.cpp" />
@@ -147,6 +150,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\camera.hpp" />
+    <ClInclude Include="headers\keyboard.hpp" />
+    <ClInclude Include="headers\mouse.hpp" />
     <ClInclude Include="headers\setup.hpp" />
     <ClInclude Include="headers\shape.hpp" />
     <ClInclude Include="headers\shapes\cube.hpp" />

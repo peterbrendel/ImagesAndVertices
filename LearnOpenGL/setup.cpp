@@ -26,5 +26,8 @@ GLFWwindow* setupWindow() {
 		return NULL;
 	}
 
+	Keyboard::setup(window);
+	Mouse::setup(window);
+
 	return window;
 }

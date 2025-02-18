@@ -1,18 +1,20 @@
 #include "setup.hpp"
 #include "shader.hpp"
 #include "texture.hpp"
+#include "camera.hpp"
 #include "shapes/triangle.hpp"
 #include "shapes/square.hpp"
 #include "shapes/cube.hpp"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
-
-float x = 0.0f, y = 0.0f;
-float d = 0.0f;
+#include <mouse.hpp>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void handleInput(GLFWwindow* window);
+
+float lastFrame = 0;
+float deltaTime = 0;
 
 int main(int argc, const char* argv[]) {
 	GLFWwindow* window = setupWindow();
@@ -59,15 +61,10 @@ int main(int argc, const char* argv[]) {
 	shader.use();
 	shader.setUniform("fTexture1", 0);
 
-	double currentFrame = glfwGetTime();
-    double lastFrame = currentFrame;
-    double deltaTime;
-
-	double a=0;
-    double speed = 0.6;
+	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f));
 
 	while (!glfwWindowShouldClose(window)) {
-		currentFrame = glfwGetTime();
+		float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
@@ -81,10 +78,8 @@ int main(int argc, const char* argv[]) {
 
 		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(d), glm::vec3(0.0f, 0.0f, 1.0f));
 
-		glm::mat4 view = glm::mat4(1.0f);
-		view = glm::translate(view, glm::vec3(x, y, -3.0f));
+		glm::mat4 view = camera.view();
 
 		glm::mat4 projection;
 		projection = glm::perspective(glm::radians(90.0f), ((float) width) / height, 0.1f, 100.0f);
@@ -132,29 +127,5 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 void handleInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-		y -= 0.01f;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-		y += 0.01f;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-		x += 0.01f;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-		x -= 0.01f;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
-		d -= 0.5f;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) {
-		d += 0.5f;
 	}
 }

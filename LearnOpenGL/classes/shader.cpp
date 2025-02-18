@@ -1,7 +1,8 @@
-#include "shader.hpp"
 #include <glm/gtc/type_ptr.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
-#include "glm/gtx/string_cast.hpp"
+#include <glm/gtx/string_cast.hpp>
+
+#include <shader.hpp>
 
 Shader::Shader(std::string vertPath, std::string fragPath) {
     unsigned int vertShader, fragShader;

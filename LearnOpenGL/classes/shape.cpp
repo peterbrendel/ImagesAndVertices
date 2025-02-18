@@ -1,7 +1,8 @@
-#include "shape.hpp"
 #include <glad/glad.h>
 #include <iostream>
 #include <gl/GL.h>
+
+#include <shape.hpp>
 
 Shape::Shape(std::vector<float>&& vertexData, std::vector<int>&& indices)
     : m_vertexData(std::move(vertexData)),
