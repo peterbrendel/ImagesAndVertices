@@ -19,6 +19,7 @@ public:
     void setUniform(std::string name, int value);
     void setUniform(std::string name, glm::vec3 value);
     void setUniform(std::string name, glm::mat4 value);
+    void setUniform(std::string name, glm::mat3 value);
 
 private:
     std::string loadShader(std::string, GLenum, unsigned int*);

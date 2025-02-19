@@ -137,6 +137,7 @@
     <ClCompile Include="classes\mouse.cpp" />
     <ClCompile Include="classes\shader.cpp" />
     <ClCompile Include="classes\shape.cpp" />
+    <ClCompile Include="classes\shapes\cube.cpp" />
     <ClCompile Include="classes\texture.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="headers\shader.hpp" />

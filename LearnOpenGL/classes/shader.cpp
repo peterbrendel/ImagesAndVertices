@@ -34,6 +34,10 @@ void Shader::setUniform(std::string name, glm::mat4 value) {
     glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
+void Shader::setUniform(std::string name, glm::mat3 value) {
+    glUniformMatrix3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+}
+
 std::string Shader::loadShader(std::string path, GLenum shaderType, unsigned int* source) {
     std::ifstream ShaderStream(path);
     std::stringstream buffer;
