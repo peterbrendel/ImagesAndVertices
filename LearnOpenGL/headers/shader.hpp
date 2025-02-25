@@ -14,12 +14,12 @@ public:
     unsigned int m_shaderProgram = 0;
 
     Shader(std::string, std::string);
-    void use();
-    void setUniform(std::string name, float value);
-    void setUniform(std::string name, int value);
-    void setUniform(std::string name, glm::vec3 value);
-    void setUniform(std::string name, glm::mat4 value);
-    void setUniform(std::string name, glm::mat3 value);
+    void use() const;
+    void setUniform(std::string name, float value) const;
+    void setUniform(std::string name, int value) const;
+    void setUniform(std::string name, glm::vec3 value) const;
+    void setUniform(std::string name, glm::mat4 value) const;
+    void setUniform(std::string name, glm::mat3 value) const;
 
 private:
     std::string loadShader(std::string, GLenum, unsigned int*);

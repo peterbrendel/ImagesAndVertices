@@ -12,29 +12,29 @@ Shader::Shader(std::string vertPath, std::string fragPath) {
     link(vertShader, fragShader);
 }
 
-void Shader::use() {
+void Shader::use() const {
     glUseProgram(m_shaderProgram);
 }
 
-void Shader::setUniform(std::string name, float value) {
+void Shader::setUniform(std::string name, float value) const {
     glUniform1f(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
 }
 
-void Shader::setUniform(std::string name, int value) {
+void Shader::setUniform(std::string name, int value) const {
     glUniform1i(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
 }
 
 // should these ever use move semantics or shared pointers?
-void Shader::setUniform(std::string name, glm::vec3 value) {
+void Shader::setUniform(std::string name, glm::vec3 value) const {
     glUniform3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, glm::value_ptr(value));
 }
 
 // should these ever use move semantics or shared pointers?
-void Shader::setUniform(std::string name, glm::mat4 value) {
+void Shader::setUniform(std::string name, glm::mat4 value) const {
     glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
-void Shader::setUniform(std::string name, glm::mat3 value) {
+void Shader::setUniform(std::string name, glm::mat3 value) const {
     glUniformMatrix3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 

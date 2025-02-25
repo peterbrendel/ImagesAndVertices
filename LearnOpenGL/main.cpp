@@ -1,14 +1,14 @@
-#include "setup.hpp"
-#include "shader.hpp"
-#include "texture.hpp"
-#include "camera.hpp"
-#include "shapes/triangle.hpp"
-#include "shapes/square.hpp"
-#include "shapes/cube.hpp"
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
-#include <mouse.hpp>
+#include <setup.hpp>
+#include <shader.hpp>
+#include <texture.hpp>
+#include <camera.hpp>
+#include <shapes/triangle.hpp>
+#include <shapes/square.hpp>
+#include <shapes/cube.hpp>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void handleInput(GLFWwindow* window);
@@ -31,7 +31,7 @@ int main(int argc, const char* argv[]) {
 	Shader lightShader = Shader("shaders/main.vert", "shaders/lightSource.frag");
 
 	Cube cube = Cube(glm::vec3(0.0f, 0.0f, 0.0f));
-	Cube lightCube = Cube(glm::vec3(3.0f, 3.0f, 0.0f));
+	Cube lightCube = Cube(glm::vec3(1.2f, 1.0f, 2.0f));
 
 	Texture textures[] = {
 		Texture("assets/container.jpg")
@@ -74,7 +74,7 @@ int main(int argc, const char* argv[]) {
 		model = glm::scale(model, glm::vec3(1.0f));
 		shader.setUniform("model", model);
 
-		auto normalMatrix = glm::transpose(glm::inverse(glm::mat3(model)));
+		auto normalMatrix = glm::transpose(glm::inverse(glm::mat3(view * model)));
 		shader.setUniform("normalMatrix", normalMatrix);
 
 		shader.setUniform("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
@@ -98,6 +98,12 @@ int main(int argc, const char* argv[]) {
 		lightShader.setUniform("translation", lightCube.m_position);
 
 		lightCube.draw();
+
+		lightCube.m_position.x = cube.m_position.x + cos(currentFrame * 1.5);
+		lightCube.m_position.y = cube.m_position.y + sin(currentFrame * 1.5);
+		lightCube.m_position.z = cube.m_position.z - cos(currentFrame * 1.5) * 2;
+
+		cube.m_position.x += 3 * 0.5 * deltaTime;
 
 		glBindVertexArray(0);
 
