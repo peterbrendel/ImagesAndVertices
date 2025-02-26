@@ -1,4 +1,5 @@
 #pragma once
+
 #include <map>
 #include <string>
 #include <glad/glad.h>
@@ -11,6 +12,6 @@ class Texture
 public:
     unsigned int m_textureId = 0;
 
-    Texture(std::string path);
-    void active(int index);
+    Texture(const std::string& path);
+    void active(int index) const;
 };

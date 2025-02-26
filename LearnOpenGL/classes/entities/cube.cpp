@@ -1,9 +1,8 @@
-#include <shapes/cube.hpp>
+#include <entities/cube.hpp>
 
 unsigned int Cube::VBO = 0;
 
-Cube::Cube(glm::vec3 position) {
-    m_position = position;
+Cube::Cube(std::shared_ptr<Shader> shader, glm::vec3 position) : Entity(shader, position) {
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
@@ -32,11 +31,18 @@ void Cube::setTexture(std::shared_ptr<Texture> texture) {
     glBindVertexArray(0);
 }
 
-void Cube::draw() {
+void Cube::draw() const {
     if (m_texture != nullptr) {
         m_texture->active(0);
     }
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
     glBindVertexArray(0);
+}
+
+void Cube::update() {
+}
+
+void Cube::update(glm::vec3 position) {
+    m_position = position;
 }

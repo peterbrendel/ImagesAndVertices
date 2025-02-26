@@ -51,7 +51,13 @@
     <ClCompile Include="classes\mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="classes\shapes\cube.cpp">
+    <ClCompile Include="classes\entities\cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,7 +77,7 @@
     <ClInclude Include="headers\shapes\triangle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\shapes\cube.hpp">
+    <ClInclude Include="headers\entities\cube.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\shapes\square.hpp">
@@ -84,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\mouse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\scene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

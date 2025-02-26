@@ -3,7 +3,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-Texture::Texture(std::string path) {
+Texture::Texture(const std::string& path) {
     stbi_set_flip_vertically_on_load(true);
 
     int width, height, channels;
@@ -30,7 +30,7 @@ Texture::Texture(std::string path) {
     glGenerateMipmap(GL_TEXTURE_2D);
 }
 
-void Texture::active(int index) {
+void Texture::active(int index) const {
     //assert(index >= 0 && index < 16);
 
     glActiveTexture(GL_TEXTURE0 + index);

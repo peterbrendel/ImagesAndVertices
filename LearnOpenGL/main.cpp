@@ -2,12 +2,10 @@
 #include <shader.hpp>
 #include <texture.hpp>
 #include <camera.hpp>
-#include <shapes/triangle.hpp>
-#include <shapes/square.hpp>
-#include <shapes/cube.hpp>
+#include <entities/cube.hpp>
+#include <scene.hpp>
 
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -27,23 +25,35 @@ int main(int argc, const char* argv[]) {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
-	Shader shader = Shader("shaders/main.vert", "shaders/main.frag");
-	Shader lightShader = Shader("shaders/main.vert", "shaders/lightSource.frag");
+	std::shared_ptr<Shader> shader = std::make_shared<Shader>("shaders/main.vert", "shaders/main.frag");
+	std::shared_ptr<Shader> lightShader = std::make_shared<Shader>("shaders/main.vert", "shaders/lightSource.frag");
 
-	Cube cube = Cube(glm::vec3(0.0f, 0.0f, 0.0f));
-	Cube lightCube = Cube(glm::vec3(1.2f, 1.0f, 2.0f));
-
-	Texture textures[] = {
-		Texture("assets/container.jpg")
+	std::vector<std::shared_ptr<Texture>> textures = {
+		std::make_shared<Texture>("assets/container.jpg")
 	};
 
-	cube.setTexture(std::make_shared<Texture>(textures[0]));
+	Cube cube = Cube(shader, glm::vec3(0.0f, 0.0f, 0.0f));
+	cube.setTexture(textures[0]);
 
-	// Render loop
-	shader.use();
-	shader.setUniform("fTexture1", 0);
+	Cube lightCube = Cube(lightShader, glm::vec3(1.2f, 1.0f, 2.0f));
 
-	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f));
+	shader->use();
+	shader->setUniform("fTexture1", 0);
+	shader->setUniform("lightPos", lightCube.position());
+
+	Scene scene = Scene();
+
+	scene.setCamera(
+		std::make_unique<Camera>(
+			shader,
+			glm::vec2(width, height),
+			90.0f,
+			glm::vec3(0.0f, 0.0f, 0.0f)
+		)
+	);
+
+	scene.add(std::make_shared<Cube>(cube));
+	scene.add(std::make_shared<Cube>(lightCube));
 
 	while (!glfwWindowShouldClose(window)) {
 		float currentFrame = (float) glfwGetTime();
@@ -55,54 +65,15 @@ int main(int argc, const char* argv[]) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		glm::mat4 view = camera.view();
-
-		glm::mat4 projection;
-		projection = glm::perspective(glm::radians(90.0f), ((float) width) / height, 0.1f, 100.0f);
-
-		// use program before set uniform
-		shader.use();
-
-		shader.setUniform("view", view);
-		shader.setUniform("projection", projection);
-
 		glEnable(GL_DEPTH_TEST);
 		glDepthMask(GL_TRUE);
-		
-		auto model = glm::translate(glm::mat4(1.0f), cube.m_position);
-		model = glm::scale(model, glm::vec3(1.0f));
-		shader.setUniform("model", model);
 
-		auto normalMatrix = glm::transpose(glm::inverse(glm::mat3(view * model)));
-		shader.setUniform("normalMatrix", normalMatrix);
+		scene.update();
+		scene.draw();
 
-		shader.setUniform("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
-		shader.setUniform("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
-		shader.setUniform("lightPos", lightCube.m_position);
+		lightCube.update(cube.position() + glm::vec3(cos(currentFrame * 1.5f), sin(currentFrame * 1.5f), -cos(currentFrame * 1.5f) * 2));
 
-		cube.draw();
-
-		lightShader.use();
-
-		model = glm::translate(glm::mat4(1.0f), lightCube.m_position);
-		model = glm::scale(model, glm::vec3(0.2f));
-		lightShader.setUniform("model", model);
-
-		normalMatrix = glm::transpose(glm::inverse(glm::mat3(model)));
-		shader.setUniform("normalMatrix", normalMatrix);
-
-		lightShader.setUniform("view", view);
-		lightShader.setUniform("projection", projection);
-
-		lightShader.setUniform("translation", lightCube.m_position);
-
-		lightCube.draw();
-
-		lightCube.m_position.x = cube.m_position.x + cos(currentFrame * 1.5);
-		lightCube.m_position.y = cube.m_position.y + sin(currentFrame * 1.5);
-		lightCube.m_position.z = cube.m_position.z - cos(currentFrame * 1.5) * 2;
-
-		cube.m_position.x += 3 * 0.5 * deltaTime;
+		cube.update(cube.position() + glm::vec3(3 * 0.5 * deltaTime, 0, 0 ));
 
 		glBindVertexArray(0);
 

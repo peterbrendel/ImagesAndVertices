@@ -134,13 +134,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classes\camera.cpp" />
+    <ClCompile Include="classes\entity.cpp" />
     <ClCompile Include="classes\keyboard.cpp" />
     <ClCompile Include="classes\mouse.cpp" />
     <ClCompile Include="classes\shader.cpp" />
     <ClCompile Include="classes\shape.cpp" />
-    <ClCompile Include="classes\shapes\cube.cpp" />
+    <ClCompile Include="classes\entities\cube.cpp" />
     <ClCompile Include="classes\texture.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="classes\scene.cpp" />
     <ClCompile Include="headers\shader.hpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="setup.cpp" />
@@ -152,12 +154,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\entity.hpp" />
+    <ClInclude Include="headers\scene.hpp" />
     <ClInclude Include="headers\camera.hpp" />
     <ClInclude Include="headers\keyboard.hpp" />
     <ClInclude Include="headers\mouse.hpp" />
     <ClInclude Include="headers\setup.hpp" />
     <ClInclude Include="headers\shape.hpp" />
-    <ClInclude Include="headers\shapes\cube.hpp" />
+    <ClInclude Include="headers\entities\cube.hpp" />
     <ClInclude Include="headers\shapes\square.hpp" />
     <ClInclude Include="headers\shapes\triangle.hpp" />
     <ClInclude Include="headers\stb_image.h" />
