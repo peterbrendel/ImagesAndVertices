@@ -71,10 +71,6 @@ int main(int argc, const char* argv[]) {
 		scene.update();
 		scene.draw();
 
-		lightCube.update(cube.position() + glm::vec3(cos(currentFrame * 1.5f), sin(currentFrame * 1.5f), -cos(currentFrame * 1.5f) * 2));
-
-		cube.update(cube.position() + glm::vec3(3 * 0.5 * deltaTime, 0, 0 ));
-
 		glBindVertexArray(0);
 
 		glfwPollEvents();
