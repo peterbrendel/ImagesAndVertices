@@ -1,6 +1,5 @@
 #pragma once
 #include <map>
-#include <string>
 #include <glad/glad.h>
 #include <fstream>
 #include <sstream>
@@ -13,17 +12,20 @@ class Shader
 public:
     unsigned int m_shaderProgram = 0;
 
-    Shader(std::string, std::string);
+    Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath);
     void use() const;
-    void setUniform(std::string name, float value) const;
-    void setUniform(std::string name, int value) const;
-    void setUniform(std::string name, glm::vec3 value) const;
-    void setUniform(std::string name, glm::mat4 value) const;
-    void setUniform(std::string name, glm::mat3 value) const;
+    void setUniform(const std::string&, float) const;
+    void setUniform(const std::string&, int) const;
+    void setUniform(const std::string&, glm::vec3) const;
+    void setUniform(const std::string&, glm::mat4) const;
+    void setUniform(const std::string&, glm::mat3) const;
 
 private:
-    std::string loadShader(std::string, GLenum, unsigned int*);
-    void link(unsigned int, unsigned int);
-    void logCompilingError(unsigned int);
-    void logLinkingError(unsigned int);
+    static std::map<std::string, unsigned int> m_shaderCache;
+
+    unsigned int loadShader(const std::string& path, GLenum shaderType);
+    void link(unsigned int vertexShaderId, unsigned int fragmentShaderId);
+    void logCompilingError(unsigned int shaderId) const;
+    void logLinkingError() const;
+    GLint getUniform(const std::string& name) const;
 };

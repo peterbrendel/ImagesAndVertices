@@ -38,7 +38,6 @@ int main(int argc, const char* argv[]) {
 	};
 
 	cube.setTexture(std::make_shared<Texture>(textures[0]));
-	//lightCube.setTexture(std::make_shared<Texture>(textures[0]));
 
 	// Render loop
 	shader.use();

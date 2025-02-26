@@ -4,55 +4,36 @@
 
 #include <shader.hpp>
 
-Shader::Shader(std::string vertPath, std::string fragPath) {
+std::map<std::string, unsigned int> Shader::m_shaderCache;
+
+Shader::Shader(const std::string& vertPath, const std::string& fragPath) {
     unsigned int vertShader, fragShader;
-    std::string vertSource = loadShader(vertPath, GL_VERTEX_SHADER, &vertShader);
-    std::string fragSource = loadShader(fragPath, GL_FRAGMENT_SHADER, &fragShader);
+
+    vertShader = loadShader(vertPath, GL_VERTEX_SHADER);
+    fragShader = loadShader(fragPath, GL_FRAGMENT_SHADER);
 
     link(vertShader, fragShader);
 }
 
-void Shader::use() const {
-    glUseProgram(m_shaderProgram);
-}
-
-void Shader::setUniform(std::string name, float value) const {
-    glUniform1f(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
-}
-
-void Shader::setUniform(std::string name, int value) const {
-    glUniform1i(glGetUniformLocation(m_shaderProgram, name.c_str()), value);
-}
-
-// should these ever use move semantics or shared pointers?
-void Shader::setUniform(std::string name, glm::vec3 value) const {
-    glUniform3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, glm::value_ptr(value));
-}
-
-// should these ever use move semantics or shared pointers?
-void Shader::setUniform(std::string name, glm::mat4 value) const {
-    glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
-}
-
-void Shader::setUniform(std::string name, glm::mat3 value) const {
-    glUniformMatrix3fv(glGetUniformLocation(m_shaderProgram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
-}
-
-std::string Shader::loadShader(std::string path, GLenum shaderType, unsigned int* source) {
+unsigned int Shader::loadShader(const std::string& path, GLenum shaderType) {
+    if (m_shaderCache.find(path) != m_shaderCache.end()) {
+        return m_shaderCache[path];
+    }
+    
     std::ifstream ShaderStream(path);
     std::stringstream buffer;
     buffer << ShaderStream.rdbuf();
 
-    *source = glCreateShader(shaderType);
+    unsigned int source = glCreateShader(shaderType);
 
     std::string shaderString = buffer.str();
     const char *sourcePtr = shaderString.c_str();
-    glShaderSource(*source, 1, &sourcePtr, NULL);
-    glCompileShader(*source);
+    glShaderSource(source, 1, &sourcePtr, NULL);
+    glCompileShader(source);
 
-    logCompilingError(*source);
+    logCompilingError(source); // not sure yet if this should stop the program
 
-    return shaderString;
+    return m_shaderCache[path] = source;
 }
 
 void Shader::link(unsigned int vert, unsigned int frag) {
@@ -63,29 +44,57 @@ void Shader::link(unsigned int vert, unsigned int frag) {
    
     glLinkProgram(m_shaderProgram);
 
-    logLinkingError(m_shaderProgram);
+    logLinkingError(); // not sure yet if this should stop the program
 }
 
-void Shader::logCompilingError(unsigned int id) {
+void Shader::logCompilingError(unsigned int id) const {
     int success;
-    char infoLog[512];
 
     glGetShaderiv(id, GL_COMPILE_STATUS, &success);
 
     if (!success) {
+        char infoLog[512];
         glGetProgramInfoLog(id, 512, NULL, infoLog);
         std::cout << infoLog << std::endl;
     }
 }
 
-void Shader::logLinkingError(unsigned int id) {
+void Shader::logLinkingError() const {
     int success;
-    char infoLog[512];
 
-    glGetProgramiv(id, GL_LINK_STATUS, &success);
+    glGetProgramiv(m_shaderProgram, GL_LINK_STATUS, &success);
 
     if (!success) {
-        glGetProgramInfoLog(id, 512, NULL, infoLog);
+        char infoLog[512];
+        glGetProgramInfoLog(m_shaderProgram, 512, NULL, infoLog);
         std::cout << infoLog << std::endl;
     }
+}
+
+void Shader::use() const {
+    glUseProgram(m_shaderProgram);
+}
+
+GLint Shader::getUniform(const std::string& name) const {
+    return glGetUniformLocation(m_shaderProgram, name.c_str());
+}
+
+void Shader::setUniform(const std::string& name, float value) const {
+    glUniform1f(getUniform(name), value);
+}
+
+void Shader::setUniform(const std::string& name, int value) const {
+    glUniform1i(getUniform(name), value);
+}
+
+void Shader::setUniform(const std::string& name, glm::vec3 value) const {
+    glUniform3fv(getUniform(name), 1, glm::value_ptr(value));
+}
+
+void Shader::setUniform(const std::string& name, glm::mat4 value) const {
+    glUniformMatrix4fv(getUniform(name), 1, GL_FALSE, glm::value_ptr(value));
+}
+
+void Shader::setUniform(const std::string& name, glm::mat3 value) const {
+    glUniformMatrix3fv(getUniform(name), 1, GL_FALSE, glm::value_ptr(value));
 }
