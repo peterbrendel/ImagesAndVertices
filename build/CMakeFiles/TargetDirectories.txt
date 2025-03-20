@@ -1,0 +1,4 @@
+/Users/brendel/dev/games/LearnOpenGL/build/CMakeFiles/glad.dir
+/Users/brendel/dev/games/LearnOpenGL/build/CMakeFiles/LearnOpenGL.dir
+/Users/brendel/dev/games/LearnOpenGL/build/CMakeFiles/edit_cache.dir
+/Users/brendel/dev/games/LearnOpenGL/build/CMakeFiles/rebuild_cache.dir
