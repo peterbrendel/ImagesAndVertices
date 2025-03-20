@@ -37,7 +37,9 @@ add_executable(
     src/classes/shape.cpp
     src/classes/texture.cpp
     src/classes/shapes/cube.cpp
-    )
+)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".run")
 
 # Include project headers
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src/deps/glad/include)
