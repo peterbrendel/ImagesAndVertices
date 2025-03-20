@@ -1,6 +1,6 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/texture.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/texture.hpp \
+  /Users/brendel/LearnOpenGL/src/classes/texture.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/texture.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/equal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -930,8 +930,8 @@ CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -982,7 +982,7 @@ CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/stb_image.h \
+  /Users/brendel/LearnOpenGL/src/headers/stb_image.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_static_assert.h

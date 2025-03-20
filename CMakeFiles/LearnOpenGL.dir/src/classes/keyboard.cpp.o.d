@@ -1,6 +1,6 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/keyboard.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/keyboard.hpp \
+  /Users/brendel/LearnOpenGL/src/classes/keyboard.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/keyboard.hpp \
   /opt/homebrew/include/GLFW/glfw3.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \

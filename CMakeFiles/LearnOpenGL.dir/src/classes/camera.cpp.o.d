@@ -1,7 +1,7 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/camera.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/camera.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/keyboard.hpp \
+  /Users/brendel/LearnOpenGL/src/classes/camera.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/camera.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/keyboard.hpp \
   /opt/homebrew/include/GLFW/glfw3.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
@@ -936,7 +936,7 @@ CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/mouse.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/mouse.hpp \
   /usr/local/include/glm/vec3.hpp \
   /usr/local/include/glm/./ext/vector_bool3.hpp \
   /usr/local/include/glm/./ext/../detail/type_vec3.hpp \

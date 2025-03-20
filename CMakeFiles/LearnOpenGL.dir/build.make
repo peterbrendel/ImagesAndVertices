@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/brendel/dev/games/LearnOpenGL
+CMAKE_SOURCE_DIR = /Users/brendel/LearnOpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/brendel/dev/games/LearnOpenGL
+CMAKE_BINARY_DIR = /Users/brendel/LearnOpenGL
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LearnOpenGL.dir/depend.make
@@ -75,128 +75,128 @@ CMakeFiles/LearnOpenGL.dir/codegen:
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -c /Users/brendel/LearnOpenGL/src/main.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/main.cpp > CMakeFiles/LearnOpenGL.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/main.cpp > CMakeFiles/LearnOpenGL.dir/src/main.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/main.cpp -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/main.cpp -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o: src/setup.cpp
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/setup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o -c /Users/brendel/LearnOpenGL/src/setup.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/setup.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/setup.cpp > CMakeFiles/LearnOpenGL.dir/src/setup.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/setup.cpp > CMakeFiles/LearnOpenGL.dir/src/setup.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/setup.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/setup.cpp -o CMakeFiles/LearnOpenGL.dir/src/setup.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/setup.cpp -o CMakeFiles/LearnOpenGL.dir/src/setup.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o: src/classes/camera.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/camera.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/camera.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/camera.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/camera.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/camera.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o: src/classes/keyboard.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/keyboard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/keyboard.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/keyboard.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/keyboard.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/keyboard.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/keyboard.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o: src/classes/mouse.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/mouse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/mouse.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/mouse.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/mouse.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/mouse.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/mouse.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o: src/classes/shader.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/shader.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/shader.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/shader.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/shader.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/shader.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o: src/classes/shape.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/shape.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/shape.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/shape.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/shape.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/shape.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: src/classes/texture.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/texture.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/texture.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/texture.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/texture.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/texture.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.s
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o: src/classes/shapes/cube.cpp
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o -c /Users/brendel/dev/games/LearnOpenGL/src/classes/shapes/cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o -c /Users/brendel/LearnOpenGL/src/classes/shapes/cube.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/dev/games/LearnOpenGL/src/classes/shapes/cube.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brendel/LearnOpenGL/src/classes/shapes/cube.cpp > CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/dev/games/LearnOpenGL/src/classes/shapes/cube.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brendel/LearnOpenGL/src/classes/shapes/cube.cpp -o CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.s
 
 # Object files for target LearnOpenGL
 LearnOpenGL_OBJECTS = \
@@ -227,7 +227,7 @@ LearnOpenGL: libglad.a
 LearnOpenGL: /opt/homebrew/lib/libglfw.3.4.dylib
 LearnOpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework
 LearnOpenGL: CMakeFiles/LearnOpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/brendel/dev/games/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable LearnOpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/brendel/LearnOpenGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable LearnOpenGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LearnOpenGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -239,6 +239,6 @@ CMakeFiles/LearnOpenGL.dir/clean:
 .PHONY : CMakeFiles/LearnOpenGL.dir/clean
 
 CMakeFiles/LearnOpenGL.dir/depend:
-	cd /Users/brendel/dev/games/LearnOpenGL && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/brendel/dev/games/LearnOpenGL /Users/brendel/dev/games/LearnOpenGL /Users/brendel/dev/games/LearnOpenGL /Users/brendel/dev/games/LearnOpenGL /Users/brendel/dev/games/LearnOpenGL/CMakeFiles/LearnOpenGL.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/brendel/LearnOpenGL && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/brendel/LearnOpenGL /Users/brendel/LearnOpenGL /Users/brendel/LearnOpenGL /Users/brendel/LearnOpenGL /Users/brendel/LearnOpenGL/CMakeFiles/LearnOpenGL.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LearnOpenGL.dir/depend
 

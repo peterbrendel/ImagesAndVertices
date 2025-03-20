@@ -1,5 +1,5 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/shader.cpp \
+  /Users/brendel/LearnOpenGL/src/classes/shader.cpp \
   /usr/local/include/glm/gtc/type_ptr.hpp \
   /usr/local/include/glm/gtc/../gtc/quaternion.hpp \
   /usr/local/include/glm/gtc/../gtc/../gtc/constants.hpp \
@@ -1280,11 +1280,11 @@ CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o: \
   /usr/local/include/glm/gtx/../gtx/dual_quaternion.inl \
   /usr/local/include/glm/gtx/../gtx/../geometric.hpp \
   /usr/local/include/glm/gtx/string_cast.inl \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shader.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shader.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \

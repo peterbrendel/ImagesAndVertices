@@ -1,8 +1,8 @@
 CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/setup.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/setup.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/setup.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/setup.hpp \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \
@@ -960,7 +960,7 @@ CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/keyboard.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/keyboard.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/mouse.hpp
+  /Users/brendel/LearnOpenGL/src/headers/mouse.hpp

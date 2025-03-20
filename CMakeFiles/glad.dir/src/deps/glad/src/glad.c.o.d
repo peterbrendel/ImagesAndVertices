@@ -1,5 +1,5 @@
 CMakeFiles/glad.dir/src/deps/glad/src/glad.c.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/src/glad.c \
+  /Users/brendel/LearnOpenGL/src/deps/glad/src/glad.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/cdefs.h \
@@ -90,5 +90,5 @@ CMakeFiles/glad.dir/src/deps/glad/src/glad.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/secure/_string.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h

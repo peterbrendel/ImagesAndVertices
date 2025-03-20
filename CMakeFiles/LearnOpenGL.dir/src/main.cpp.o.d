@@ -1,8 +1,8 @@
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/main.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/setup.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/main.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/setup.hpp \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \
@@ -960,11 +960,11 @@ CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/keyboard.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/keyboard.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/mouse.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shader.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/mouse.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shader.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -1151,8 +1151,8 @@ CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: \
   /usr/local/include/glm/./ext/matrix_double4x4_precision.hpp \
   /usr/local/include/glm/./ext/matrix_float4x4.hpp \
   /usr/local/include/glm/./ext/matrix_float4x4_precision.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/texture.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/camera.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/texture.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/camera.hpp \
   /usr/local/include/glm/ext/matrix_transform.hpp \
   /usr/local/include/glm/ext/../gtc/constants.hpp \
   /usr/local/include/glm/ext/../gtc/../ext/scalar_constants.hpp \
@@ -1167,10 +1167,10 @@ CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: \
   /usr/local/include/glm/ext/../detail/_vectorize.hpp \
   /usr/local/include/glm/ext/../matrix.hpp \
   /usr/local/include/glm/ext/matrix_transform.inl \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shapes/triangle.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shape.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shapes/square.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shapes/cube.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shapes/triangle.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shape.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shapes/square.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shapes/cube.hpp \
   /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/detail/setup.hpp \

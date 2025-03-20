@@ -1,6 +1,6 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/shapes/cube.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shapes/cube.hpp \
+  /Users/brendel/LearnOpenGL/src/classes/shapes/cube.cpp \
+  /Users/brendel/LearnOpenGL/src/headers/shapes/cube.hpp \
   /usr/local/include/glm/vec3.hpp \
   /usr/local/include/glm/./ext/vector_bool3.hpp \
   /usr/local/include/glm/./ext/../detail/type_vec3.hpp \
@@ -1147,9 +1147,9 @@ CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o: \
   /usr/local/include/glm/gtc/../geometric.hpp \
   /usr/local/include/glm/gtc/../trigonometric.hpp \
   /usr/local/include/glm/gtc/../matrix.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/texture.hpp \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/headers/texture.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \

@@ -8,15 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/camera.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/keyboard.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/mouse.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/shader.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/shape.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/shapes/cube.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/classes/texture.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/main.cpp" "CMakeFiles/LearnOpenGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d"
-  "/Users/brendel/dev/games/LearnOpenGL/src/setup.cpp" "CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/camera.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/camera.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/keyboard.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/keyboard.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/mouse.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/mouse.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/shader.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shader.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/shape.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/shapes/cube.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/shapes/cube.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/classes/texture.cpp" "CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/classes/texture.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/main.cpp" "CMakeFiles/LearnOpenGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d"
+  "/Users/brendel/LearnOpenGL/src/setup.cpp" "CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o" "gcc" "CMakeFiles/LearnOpenGL.dir/src/setup.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

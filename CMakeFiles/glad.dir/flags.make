@@ -4,7 +4,7 @@
 # compile C with /Library/Developer/CommandLineTools/usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -isystem /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include
+C_INCLUDES = -isystem /Users/brendel/LearnOpenGL/src/deps/glad/include
 
 C_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
 

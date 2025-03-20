@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/src.dir/src/main.cpp.o -o src  -Wl,-rpath,/opt/homebrew/lib libglad.a /opt/homebrew/lib/libglfw.3.4.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo

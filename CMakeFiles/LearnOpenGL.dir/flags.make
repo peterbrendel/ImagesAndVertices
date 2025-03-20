@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include -I/Users/brendel/dev/games/LearnOpenGL/src/headers -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks -isystem /usr/local/include
+CXX_INCLUDES = -I/Users/brendel/LearnOpenGL/src/deps/glad/include -I/Users/brendel/LearnOpenGL/src/headers -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks -isystem /usr/local/include
 
 CXX_FLAGSarm64 = -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
 

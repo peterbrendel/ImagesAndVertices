@@ -1,7 +1,7 @@
 CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o: \
-  /Users/brendel/dev/games/LearnOpenGL/src/classes/shape.cpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/glad/glad.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
+  /Users/brendel/LearnOpenGL/src/classes/shape.cpp \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/glad/glad.h \
+  /Users/brendel/LearnOpenGL/src/deps/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \
@@ -959,8 +959,8 @@ CMakeFiles/LearnOpenGL.dir/src/classes/shape.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/shape.hpp \
-  /Users/brendel/dev/games/LearnOpenGL/src/headers/texture.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/shape.hpp \
+  /Users/brendel/LearnOpenGL/src/headers/texture.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
