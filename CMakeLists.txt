@@ -65,3 +65,5 @@ endif()
 if(WIN32)
     target_link_libraries(${PROJECT_NAME} PRIVATE opengl32)
 endif()
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
