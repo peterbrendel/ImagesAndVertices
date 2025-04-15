@@ -16,6 +16,7 @@ Shader::Shader(const std::string& vertPath, const std::string& fragPath) {
 }
 
 unsigned int Shader::loadShader(const std::string& path, GLenum shaderType) {
+    std::cout << path << '\n';
     if (m_shaderCache.find(path) != m_shaderCache.end()) {
         return m_shaderCache[path];
     }
@@ -28,6 +29,7 @@ unsigned int Shader::loadShader(const std::string& path, GLenum shaderType) {
 
     std::string shaderString = buffer.str();
     const char *sourcePtr = shaderString.c_str();
+
     glShaderSource(source, 1, &sourcePtr, NULL);
     glCompileShader(source);
 
@@ -51,10 +53,10 @@ void Shader::logCompilingError(unsigned int id) const {
     int success;
 
     glGetShaderiv(id, GL_COMPILE_STATUS, &success);
-
+    std::cout << "logging error\n";
     if (!success) {
-        char infoLog[512];
-        glGetProgramInfoLog(id, 512, NULL, infoLog);
+        char infoLog[512] = {0};
+        glGetShaderInfoLog(id, 512, NULL, infoLog);
         std::cout << infoLog << std::endl;
     }
 }
@@ -65,7 +67,7 @@ void Shader::logLinkingError() const {
     glGetProgramiv(m_shaderProgram, GL_LINK_STATUS, &success);
 
     if (!success) {
-        char infoLog[512];
+        char infoLog[512] = {0};
         glGetProgramInfoLog(m_shaderProgram, 512, NULL, infoLog);
         std::cout << infoLog << std::endl;
     }

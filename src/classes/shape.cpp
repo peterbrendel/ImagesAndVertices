@@ -1,6 +1,11 @@
 #include <glad/glad.h>
 #include <iostream>
-#include <gl/GL.h>
+
+#if defined(__APPLE__)
+#include <OpenGL/gl.h>
+#else
+#include <GL/gl.h>
+#endif
 
 #include <shape.hpp>
 

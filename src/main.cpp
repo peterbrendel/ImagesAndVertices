@@ -17,6 +17,12 @@ float lastFrame = 0;
 float deltaTime = 0;
 
 int main(int argc, const char* argv[]) {
+	printf("Running with %d args\n", argc);
+	for (int i=0; i < argc; i++) {
+		printf("arg[%d] = %s\n", i, argv[i]);
+	}
+	printf("\n");
+
 	GLFWwindow* window = setupWindow();
 	int width, height;
 	glfwGetWindowSize(window, &width, &height);
@@ -27,14 +33,16 @@ int main(int argc, const char* argv[]) {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
-	Shader shader = Shader("shaders/main.vert", "shaders/main.frag");
-	Shader lightShader = Shader("shaders/main.vert", "shaders/lightSource.frag");
+	printf("Supported GLSL version is %s.\n", (char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
+
+	Shader shader = Shader("assets/shaders/main.vert", "assets/shaders/main.frag");
+	Shader lightShader = Shader("assets/shaders/main.vert", "assets/shaders/lightSource.frag");
 
 	Cube cube = Cube(glm::vec3(0.0f, 0.0f, 0.0f));
 	Cube lightCube = Cube(glm::vec3(1.2f, 1.0f, 2.0f));
 
 	Texture textures[] = {
-		Texture("assets/container.jpg")
+		Texture("assets/textures/container.jpg")
 	};
 
 	cube.setTexture(std::make_shared<Texture>(textures[0]));

@@ -1,4 +1,4 @@
-#include "setup.hpp"
+#include <setup.hpp>
 
 GLFWwindow* setupWindow() {
     // Initialize glfw
@@ -8,6 +8,7 @@ GLFWwindow* setupWindow() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	GLFWwindow* window = glfwCreateWindow(1920 / 2, 1080 / 2, "OpenGL", NULL, NULL);
 
