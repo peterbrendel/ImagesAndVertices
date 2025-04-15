@@ -1,31 +1,37 @@
 cmake_minimum_required(VERSION 3.20)
-project(LearnOpenGL)
+project(ImagesAndVertices)
 
 set(CMAKE_CXX_STANDARD 20)
 set_property(${PROJECT} TARGET PROPERTY CXX_STANDARD 20)
 
+include(FetchContent)
 
-set(CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/glm")
+FetchContent_Declare(
+  glfw
+  GIT_REPOSITORY https://github.com/glfw/glfw.git
+  GIT_TAG        3.4
+)
 
-# Set up paths for macOS Homebrew
+FetchContent_Declare(
+  glm
+  GIT_REPOSITORY https://github.com/g-truc/glm.git
+  GIT_TAG        1.0.1
+)
+
+FetchContent_MakeAvailable(glfw)
+FetchContent_MakeAvailable(glm)
+
 if(APPLE)
     set(CMAKE_PREFIX_PATH "/opt/homebrew/opt/;${CMAKE_PREFIX_PATH}")
 endif()
 
-# Find GLFW and OpenGL
-find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 
-# find GLM
-find_package(glm CONFIG REQUIRED)
 
-# Add GLAD source file
 add_library(glad src/deps/glad/src/glad.c)
 
-# Make sure the glad include path is recognized via angle brackets
 target_include_directories(glad SYSTEM PRIVATE ${CMAKE_SOURCE_DIR}/src/deps/glad/include)
 
-# Define executable target
 add_executable(
     ${PROJECT_NAME}
     src/main.cpp
@@ -39,27 +45,23 @@ add_executable(
     src/classes/shapes/cube.cpp
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".run")
+file(GLOB_RECURSE PROJECT_HEADERS CONFIGURE_DEPENDS "src/headers/**")
+target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_HEADERS})
+source_group("Header Files" FILES ${PROJECT_HEADERS})
 
-# Include project headers
+if(APPLE)
+    set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".run")
+endif()
+
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src/deps/glad/include)
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src/headers)
 
-# Link GLAD to the executable target
-target_link_libraries(${PROJECT_NAME} PRIVATE glad)
+target_link_libraries(${PROJECT_NAME} PRIVATE glad glfw OpenGL::GL glm::glm-header-only)
 
-# Link GLFW and OpenGL to the executable target
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw OpenGL::GL)
-
-# Link GLM to the executable target
-target_link_libraries(${PROJECT_NAME} PRIVATE glm::glm-header-only)
-
-# macOS specific settings
 if(APPLE)
     target_link_libraries(${PROJECT_NAME} PRIVATE "-framework Cocoa" "-framework IOKit" "-framework CoreVideo")
 endif()
 
-# Windows-specific settings
 if(WIN32)
-    target_link_libraries(${PROJECT_NAME} opengl32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE opengl32)
 endif()

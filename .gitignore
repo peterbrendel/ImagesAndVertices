@@ -381,3 +381,5 @@ CMakeUserPresets.json
 build
 *.a
 *.run
+*.vcxproj*
+*.sln
