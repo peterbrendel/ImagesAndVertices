@@ -7,7 +7,6 @@
 #include <shapes/cube.hpp>
 
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -46,7 +45,7 @@ int main(int argc, const char* argv[]) {
 	shader.use();
 	shader.setUniform("fTexture1", 0);
 
-	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f));
+	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), (float) width / height);
 
 	while (!glfwWindowShouldClose(window)) {
 		float currentFrame = (float) glfwGetTime();
@@ -59,9 +58,7 @@ int main(int argc, const char* argv[]) {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		glm::mat4 view = camera.view();
-
-		glm::mat4 projection;
-		projection = glm::perspective(glm::radians(90.0f), ((float) width) / height, 0.1f, 100.0f);
+		glm::mat4 projection = camera.projection();
 
 		// use program before set uniform
 		shader.use();
@@ -91,7 +88,7 @@ int main(int argc, const char* argv[]) {
 		model = glm::scale(model, glm::vec3(0.2f));
 		lightShader.setUniform("model", model);
 
-		normalMatrix = glm::transpose(glm::inverse(glm::mat3(model)));
+		normalMatrix = glm::transpose(glm::inverse(glm::mat3(view * model)));
 		shader.setUniform("normalMatrix", normalMatrix);
 
 		lightShader.setUniform("view", view);

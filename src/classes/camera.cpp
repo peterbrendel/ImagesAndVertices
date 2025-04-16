@@ -2,7 +2,7 @@
 
 extern float deltaTime;
 
-Camera::Camera(glm::vec3 position) : position(position) {
+Camera::Camera(glm::vec3 position, float aspectRatio) : position(position), aspectRatio(aspectRatio) {
 }
 
 void Camera::update() {
@@ -44,4 +44,8 @@ glm::mat4 Camera::view() {
     update();
 
     return glm::lookAt(position, position + front, up);
+}
+
+glm::mat4 Camera::projection() const {
+    return glm::perspective(glm::radians(90.0f), aspectRatio, 0.1f, 100.0f);
 }
