@@ -1,6 +1,14 @@
 #include <setup.hpp>
+#include <spdlog/spdlog.h>
 
-GLFWwindow* setupWindow() {
+GLFWwindow* setupWindow(const int argc, const char* argv[]) {
+	spdlog::cfg::load_env_levels();
+
+	spdlog::info("Running with {} args", argc);
+	for (int i = 0; i < argc; i++) {
+		spdlog::info("arg[{0}] = {1}", i, argv[i]);
+	}
+
     // Initialize glfw
 	glfwInit();
 
@@ -13,7 +21,7 @@ GLFWwindow* setupWindow() {
 	GLFWwindow* window = glfwCreateWindow(1920 / 2, 1080 / 2, "OpenGL", NULL, NULL);
 
 	if (window == NULL) {
-		std::cout << "Failed to create GLFW window" << std::endl;
+		spdlog::error("Failed to create GLFW");
 		glfwTerminate();
 		return NULL;
 	}
@@ -22,7 +30,7 @@ GLFWwindow* setupWindow() {
 
 	// Load OpenGL instruction pointers
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << "Failed to initialize GLAD" << std::endl;
+		spdlog::error("Failed to initialize GLA");
         glfwTerminate();
 		return NULL;
 	}

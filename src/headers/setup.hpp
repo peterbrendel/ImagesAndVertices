@@ -2,9 +2,11 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <spdlog/spdlog.h>
+#include <spdlog/cfg/env.h>
 
 #include <keyboard.hpp>
 #include <mouse.hpp>
 
-GLFWwindow* setupWindow();
+
+GLFWwindow* setupWindow(const int argc, const char* argv[]);

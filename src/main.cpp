@@ -17,13 +17,8 @@ float lastFrame = 0;
 float deltaTime = 0;
 
 int main(int argc, const char* argv[]) {
-	printf("Running with %d args\n", argc);
-	for (int i=0; i < argc; i++) {
-		printf("arg[%d] = %s\n", i, argv[i]);
-	}
-	printf("\n");
+	GLFWwindow* window = setupWindow(argc, argv);
 
-	GLFWwindow* window = setupWindow();
 	int width, height;
 	glfwGetWindowSize(window, &width, &height);
 
@@ -33,7 +28,7 @@ int main(int argc, const char* argv[]) {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
-	printf("Supported GLSL version is %s.\n", (char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
+	spdlog::info("Supported GLSL version is {}", (char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
 
 	Shader shader = Shader("assets/shaders/main.vert", "assets/shaders/main.frag");
 	Shader lightShader = Shader("assets/shaders/main.vert", "assets/shaders/lightSource.frag");

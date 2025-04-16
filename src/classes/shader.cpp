@@ -3,6 +3,7 @@
 #include <glm/gtx/string_cast.hpp>
 
 #include <shader.hpp>
+#include <spdlog/spdlog.h>
 
 std::map<std::string, unsigned int> Shader::m_shaderCache;
 
@@ -16,7 +17,7 @@ Shader::Shader(const std::string& vertPath, const std::string& fragPath) {
 }
 
 unsigned int Shader::loadShader(const std::string& path, GLenum shaderType) {
-    std::cout << path << '\n';
+    spdlog::debug(path);
     if (m_shaderCache.find(path) != m_shaderCache.end()) {
         return m_shaderCache[path];
     }
@@ -53,11 +54,10 @@ void Shader::logCompilingError(unsigned int id) const {
     int success;
 
     glGetShaderiv(id, GL_COMPILE_STATUS, &success);
-    std::cout << "logging error\n";
     if (!success) {
         char infoLog[512] = {0};
         glGetShaderInfoLog(id, 512, NULL, infoLog);
-        std::cout << infoLog << std::endl;
+        spdlog::debug(infoLog);
     }
 }
 
@@ -69,7 +69,7 @@ void Shader::logLinkingError() const {
     if (!success) {
         char infoLog[512] = {0};
         glGetProgramInfoLog(m_shaderProgram, 512, NULL, infoLog);
-        std::cout << infoLog << std::endl;
+        spdlog::debug(infoLog);
     }
 }
 

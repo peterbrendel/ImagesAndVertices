@@ -1,4 +1,5 @@
 #include <texture.hpp>
+#include <spdlog/spdlog.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -11,7 +12,7 @@ Texture::Texture(std::string path) {
     data = stbi_load(path.c_str(), &width, &height, &channels, 0);
 
     if (!data) {
-        std::cout << "Failed to load texture from " << path << std::endl;
+        spdlog::warn("Failed to load texture from {}", path);
         stbi_image_free(data);
         return;
     }
