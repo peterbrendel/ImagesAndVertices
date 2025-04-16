@@ -8,5 +8,6 @@
 #include <keyboard.hpp>
 #include <mouse.hpp>
 
-
-GLFWwindow* setupWindow(const int argc, const char* argv[]);
+namespace Core {
+    GLFWwindow* setupWindow(const int argc, const char* argv[]);
+}

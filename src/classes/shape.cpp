@@ -60,7 +60,7 @@ void Shape::draw() {
     glBindVertexArray(0);
 }
 
-void Shape::setTexture(std::shared_ptr<Texture> texture_ptr) {
+void Shape::setTexture(std::shared_ptr<Core::Texture> texture_ptr) {
     m_texture = texture_ptr;
 
     std::vector<float> updatedVertexData;

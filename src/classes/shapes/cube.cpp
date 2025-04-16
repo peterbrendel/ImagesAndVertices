@@ -23,7 +23,7 @@ Cube::Cube(glm::vec3 position) {
     glBindVertexArray(0);
 }
 
-void Cube::setTexture(std::shared_ptr<Texture> texture) {
+void Cube::setTexture(std::shared_ptr<Core::Texture> texture) {
     m_texture = texture;
 
     glBindVertexArray(VAO);

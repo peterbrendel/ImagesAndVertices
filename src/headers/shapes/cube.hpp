@@ -57,12 +57,12 @@ class Cube
 {
     unsigned int VAO = 0;
     static unsigned int VBO;
-    std::shared_ptr<Texture> m_texture;
+    std::shared_ptr<Core::Texture> m_texture;
 
 public:
     glm::vec3 m_position;
 
     Cube(glm::vec3 position);
-    void setTexture(std::shared_ptr<Texture> texture);
+    void setTexture(std::shared_ptr<Core::Texture> texture);
     void draw();
 };

@@ -4,6 +4,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
+using namespace Core;
+
 Texture::Texture(std::string path) {
     stbi_set_flip_vertically_on_load(true);
 

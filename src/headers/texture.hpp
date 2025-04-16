@@ -6,11 +6,13 @@
 #include <sstream>
 #include <iostream>
 
-class Texture
-{
-public:
-    unsigned int m_textureId = 0;
+namespace Core {
+    class Texture
+    {
+    public:
+        unsigned int m_textureId = 0;
 
-    Texture(std::string path);
-    void active(int index);
-};
+        Texture(std::string path);
+        void active(int index);
+    };
+}

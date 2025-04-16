@@ -5,6 +5,8 @@
 #include <shader.hpp>
 #include <spdlog/spdlog.h>
 
+using namespace Core;
+
 std::map<std::string, unsigned int> Shader::m_shaderCache;
 
 Shader::Shader(const std::string& vertPath, const std::string& fragPath) {

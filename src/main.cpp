@@ -16,7 +16,7 @@ float lastFrame = 0;
 float deltaTime = 0;
 
 int main(int argc, const char* argv[]) {
-	GLFWwindow* window = setupWindow(argc, argv);
+	GLFWwindow* window = Core::setupWindow(argc, argv);
 
 	int width, height;
 	glfwGetWindowSize(window, &width, &height);
@@ -29,23 +29,23 @@ int main(int argc, const char* argv[]) {
 
 	spdlog::info("Supported GLSL version is {}", (char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
 
-	Shader shader = Shader("assets/shaders/main.vert", "assets/shaders/main.frag");
-	Shader lightShader = Shader("assets/shaders/main.vert", "assets/shaders/lightSource.frag");
+	Core::Shader shader = Core::Shader("assets/shaders/main.vert", "assets/shaders/main.frag");
+	Core::Shader lightShader = Core::Shader("assets/shaders/main.vert", "assets/shaders/lightSource.frag");
 
 	Cube cube = Cube(glm::vec3(0.0f, 0.0f, 0.0f));
 	Cube lightCube = Cube(glm::vec3(1.2f, 1.0f, 2.0f));
 
-	Texture textures[] = {
-		Texture("assets/textures/container.jpg")
+	Core::Texture textures[] = {
+		Core::Texture("assets/textures/container.jpg")
 	};
 
-	cube.setTexture(std::make_shared<Texture>(textures[0]));
+	cube.setTexture(std::make_shared<Core::Texture>(textures[0]));
 
 	// Render loop
 	shader.use();
 	shader.setUniform("fTexture1", 0);
 
-	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), (float) width / height);
+	Core::Camera camera = Core::Camera(glm::vec3(0.0f, 0.0f, 0.0f), (float) width / height);
 
 	while (!glfwWindowShouldClose(window)) {
 		float currentFrame = (float) glfwGetTime();

@@ -1,6 +1,8 @@
 #include <keyboard.hpp>
 #include <iostream>
 
+using namespace Core;
+
 std::vector<Keyboard*> Keyboard::instances;
 
 Keyboard::Keyboard(std::vector<int> keySubscription) {

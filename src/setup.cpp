@@ -1,7 +1,7 @@
 #include <setup.hpp>
 #include <spdlog/spdlog.h>
 
-GLFWwindow* setupWindow(const int argc, const char* argv[]) {
+GLFWwindow* Core::setupWindow(const int argc, const char* argv[]) {
 	spdlog::cfg::load_env_levels();
 
 	spdlog::info("Running with {} args", argc);

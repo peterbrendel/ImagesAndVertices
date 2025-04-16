@@ -1,5 +1,7 @@
 #include <mouse.hpp>
 
+using namespace Core;
+
 std::vector<Mouse*> Mouse::instances;
 
 Mouse::Mouse() {

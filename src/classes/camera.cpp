@@ -2,11 +2,13 @@
 
 extern float deltaTime;
 
+using namespace Core;
+
 Camera::Camera(glm::vec3 position, float aspectRatio) : position(position), aspectRatio(aspectRatio) {
 }
 
 void Camera::update() {
-    CursorMovement drag = mouse.getMovement();
+    Core::CursorMovement drag = mouse.getMovement();
 
     if (drag.locked) {
         yaw += drag.offsetX * sensitivity;
