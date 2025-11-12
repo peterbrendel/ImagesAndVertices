@@ -2,7 +2,7 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/string_cast.hpp>
 
-#include <shader.hpp>
+#include <shader.h>
 #include <spdlog/spdlog.h>
 
 using namespace Core;

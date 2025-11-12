@@ -1,6 +1,4 @@
-#include <camera.hpp>
-
-extern float deltaTime;
+#include <camera.h>
 
 using namespace Core;
 
@@ -39,7 +37,7 @@ void Camera::update() {
     direction += speed * (left + right) * glm::normalize(glm::cross(front, up));
     direction += speed * (cup + down) * up;
 
-    position += direction * deltaTime;
+    position += direction;
 }
 
 glm::mat4 Camera::view() {

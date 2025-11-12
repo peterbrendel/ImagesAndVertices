@@ -1,4 +1,4 @@
-#include <mouse.hpp>
+#include <mouse.h>
 
 using namespace Core;
 

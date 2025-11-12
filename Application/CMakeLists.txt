@@ -6,6 +6,11 @@ add_executable(
     src/main.cpp
 )
 
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/headers
+)
+
 target_link_libraries(${PROJECT_NAME} PUBLIC Core)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

@@ -1,4 +1,4 @@
-#include <texture.hpp>
+#include <texture.h>
 #include <spdlog/spdlog.h>
 
 #define STB_IMAGE_IMPLEMENTATION

@@ -1,6 +1,6 @@
 #pragma once
-#include <keyboard.hpp>
-#include <mouse.hpp>
+#include <keyboard.h>
+#include <mouse.h>
 
 #include <glm/vec3.hpp>
 #include <glm/mat4x4.hpp>
